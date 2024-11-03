@@ -5,7 +5,7 @@ import transcriptToArray, { ITranscriptLine } from './tsToArray';
 
 
 interface IOptions {
-  modelName?: string, // name of model stored in node_modules/whisper-node/lib/whisper.cpp/models
+  modelName?: string, // name of model stored in node_modules/whisper-node/vendor/whisper.cpp-1.7.1/models
   modelPath?: string, // custom path for model
   whisperOptions?: IFlagTypes
   shellOptions?: IShellOptions

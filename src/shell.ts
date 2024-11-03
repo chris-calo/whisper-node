@@ -2,7 +2,7 @@ import path from "path";
 import shell from 'shelljs';
 
 // docs: https://github.com/ggerganov/whisper.cpp
-const WHISPER_CPP_PATH = path.join(__dirname, '..', 'lib/whisper.cpp');
+const WHISPER_CPP_PATH = path.join(__dirname, '..', 'vendor/whisper.cpp-1.7.1');
 const WHISPER_CPP_MAIN_PATH = "./main";
 
 export interface IShellOptions {
