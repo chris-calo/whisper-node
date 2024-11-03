@@ -1,13 +1,4 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -23,22 +14,20 @@ const defaultShellOptions = {
     async: false
 };
 // return shelljs process
-function whisperShell(command, options = defaultShellOptions) {
-    return __awaiter(this, void 0, void 0, function* () {
-        return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
-            try {
-                // docs: https://github.com/shelljs/shelljs#execcommand--options--callback
-                shelljs_1.default.exec(command, options, (code, stdout, stderr) => {
-                    if (code === 0)
-                        resolve(stdout);
-                    else
-                        reject(stderr);
-                });
-            }
-            catch (error) {
-                reject(error);
-            }
-        }));
+async function whisperShell(command, options = defaultShellOptions) {
+    return new Promise(async (resolve, reject) => {
+        try {
+            // docs: https://github.com/shelljs/shelljs#execcommand--options--callback
+            shelljs_1.default.exec(command, options, (code, stdout, stderr) => {
+                if (code === 0)
+                    resolve(stdout);
+                else
+                    reject(stderr);
+            });
+        }
+        catch (error) {
+            reject(error);
+        }
     });
 }
 exports.default = whisperShell;

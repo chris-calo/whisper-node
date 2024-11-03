@@ -15,6 +15,7 @@
     "test": "node dist/test.js"
   },
   "devDependencies": {
+    "@types/electron": "^1.6.12",
     "@types/node": "^18.11.13",
     "nodemon": "^2.0.20",
     "ts-node": "^10.9.1",
