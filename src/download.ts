@@ -13,14 +13,28 @@ import {DEFAULT_MODEL, NODE_MODULES_MODELS_PATH} from './constants'
 const MODELS_LIST = [
   "tiny",
   "tiny.en",
+  "tiny-q5_1",
+  "tiny.en-q5_1",
   "base",
   "base.en",
+  "base-q5_1",
+  "base.en-q5_1",
   "small",
   "small.en",
+  "small.en-tdrz",
+  "small-q5_1",
+  "small.en-q5_1",
   "medium",
   "medium.en",
+  "medium-q5_0",
+  "medium.en-q5_0",
   "large-v1",
-  "large"
+  "large-v2",
+  "large-v2-q5_0",
+  "large-v3",
+  "large-v3-q5_0",
+  "large-v3-turbo",
+  "large-v3-turbo-q5_0",
 ];
 
 
@@ -54,18 +68,32 @@ export default async function downloadModel() {
     shell.cd(NODE_MODULES_MODELS_PATH);
 
     console.log(`
-| Model     | Disk   | RAM     |
-|-----------|--------|---------|
-| tiny      |  75 MB | ~390 MB |
-| tiny.en   |  75 MB | ~390 MB |
-| base      | 142 MB | ~500 MB |
-| base.en   | 142 MB | ~500 MB |
-| small     | 466 MB | ~1.0 GB |
-| small.en  | 466 MB | ~1.0 GB |
-| medium    | 1.5 GB | ~2.6 GB |
-| medium.en | 1.5 GB | ~2.6 GB |
-| large-v1  | 2.9 GB | ~4.7 GB |
-| large     | 2.9 GB | ~4.7 GB |
+| Model               | Disk   | RAM     |
+|---------------------|--------|---------|
+| tiny                | XX MB  | ~XXXMB  |
+| tiny.en             | XX MB  | ~XXXMB  | 
+| tiny-q5_1           | XX MB  | ~XXXMB  |
+| tiny.en-q5_1        | XX MB  | ~XXXMB  |
+| base                | XX MB  | ~XXXMB  |
+| base.en             | XX MB  | ~XXXMB  |
+| base-q5_1           | XX MB  | ~XXXMB  |
+| base.en-q5_1        | XX MB  | ~XXXMB  |
+| small               | XX MB  | ~XXXMB  |
+| small.en            | XX MB  | ~XXXMB  |
+| small.en-tdrz       | XX MB  | ~XXXMB  |
+| small-q5_1          | XX MB  | ~XXXMB  |
+| small.en-q5_1       | XX MB  | ~XXXMB  |
+| medium              | XX MB  | ~XXXMB  |
+| medium.en           | XX MB  | ~XXXMB  |
+| medium-q5_0         | XX MB  | ~XXXMB  |
+| medium.en-q5_0      | XX MB  | ~XXXMB  |
+| large-v1            | XX MB  | ~XXXMB  |
+| large-v2            | XX MB  | ~XXXMB  |
+| large-v2-q5_0       | XX MB  | ~XXXMB  |
+| large-v3            | XX MB  | ~XXXMB  |
+| large-v3-q5_0       | XX MB  | ~XXXMB  |
+| large-v3-turbo      | XX MB  | ~XXXMB  |
+| large-v3-turbo-q5_0 | XX MB  | ~XXXMB  |
 `);
 
     // ensure running in correct path
